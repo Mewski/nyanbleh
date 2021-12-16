@@ -27,12 +27,12 @@ body {
   padding: 0;
 }
 @keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 .content {
   position: absolute;
@@ -40,7 +40,7 @@ body {
   animation: fadeInAnimation 1s ease 1 forwards;
 }
 h1 {
-  color: #dcdcdc;
-  text-decoration: none;
+    color: #dcdcdc;
+    text-decoration: none;
 }
 </style>
