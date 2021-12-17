@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a>你好。<br />我爱大家。<br />我恨网站。<br />它们最笨。</a>
+    <a>dunno yet</a>
   </div>
 </template>
 
