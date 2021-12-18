@@ -16,7 +16,7 @@ body {
 .nuxt {
   position: absolute;
   top: 40px;
-  margin: 5px;
+  width: 100%;
 }
 
 .page-enter-active,
