@@ -18,3 +18,22 @@ body {
   top: 40px;
   margin: 5px;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s ease;
+}
+.page-enter {
+  top: 60px;
+  opacity: 0;
+}
+.page-enter-to {
+  top: 40px;
+  opacity: 1;
+}
+.page-leave {
+  opacity: 1;
+}
+.page-leave-to {
+  opacity: 0;
+}
