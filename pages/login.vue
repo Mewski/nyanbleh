@@ -1,5 +1,7 @@
 <template>
-  <div>bleh</div>
+  <div>
+    <LoginBox />
+  </div>
 </template>
 
 <script>
