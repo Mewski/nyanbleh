@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a class="content">hallo<br>random text here<br>idk</a>
+    <a class="content">hallo<br />random text here<br />idk</a>
   </div>
 </template>
 
@@ -11,10 +11,10 @@ export default {
 </script>
 
 <style scoped>
-  .content {
-    position: absolute;
-    text-align: center;
-    margin-top: 25px;
-    width: 100%;
-  }
+.content {
+  position: absolute;
+  text-align: center;
+  margin-top: 25px;
+  width: 100%;
+}
 </style>

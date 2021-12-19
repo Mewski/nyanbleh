@@ -7,6 +7,10 @@
   user-select: none;
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 body {
   background-color: #14151f;
   margin: 0;
@@ -17,6 +21,7 @@ body {
   position: absolute;
   top: 40px;
   width: 100%;
+  height: calc(100% - 40px);
 }
 
 .page-enter-active,
@@ -36,4 +41,7 @@ body {
 }
 .page-leave-to {
   opacity: 0;
+}
+.centered {
+  position: absolute;
 }

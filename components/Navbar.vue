@@ -1,18 +1,19 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" :class="{ scrolled: !view.atTopOfPage }">
     <NuxtLink class="title" to="/">nyanbleh</NuxtLink>
     <div class="seperator" />
     <div class="nav">
       <NuxtLink class="nav-link" to="/projects">projects</NuxtLink>
       <NuxtLink class="nav-link" to="/about">about me</NuxtLink>
       <NuxtLink class="nav-link" to="/donate">donate</NuxtLink>
+      <NuxtLink class="nav-link" to="/dashboard">dashboard</NuxtLink>
     </div>
     <div class="socials">
       <a href="https://discord.gg/bark">
-        <img class="navbar-icon" src="/Discord-Bubble-Light-64px.png" />
+        <img class="navbar-icon" src="/img/Discord-Bubble-Light-64px.png" />
       </a>
       <a href="https://github.com/Mewski">
-        <img class="navbar-icon" src="/GitHub-Mark-Light-64px.png" />
+        <img class="navbar-icon" src="/img/GitHub-Mark-Light-64px.png" />
       </a>
     </div>
   </div>
@@ -21,6 +22,25 @@
 <script>
 export default {
   name: 'Navbar',
+  data() {
+    return {
+      view: {
+        atTopOfPage: true,
+      },
+    }
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      if (window.pageYOffset > 0) {
+        if (this.view.atTopOfPage) this.view.atTopOfPage = false
+      } else {
+        if (!this.view.atTopOfPage) this.view.atTopOfPage = true
+      }
+    },
+  },
 }
 </script>
 
@@ -30,7 +50,10 @@ export default {
   height: 40px;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 99999;
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 .title {
   color: #dcdcdc;
